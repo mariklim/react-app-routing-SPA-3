@@ -5,18 +5,18 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-nav{
+header{
   display: flex;
   justify-content: center;
   padding: 40px 0;
 }
 
-nav ul{
+header ul{
   display: flex;
   list-style: none;
 }
 
-nav ul li{
+header ul li{
  margin: 0 .625rem;
  font-size: 20px;
 }

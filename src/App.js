@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import About from './Components/About';
 import Products from './Components/Products';
+import Product from './Components/Product';
 import Contacts from './Components/Contacts';
 
 import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
@@ -13,7 +14,7 @@ function App() {
       {/* <Header/> */}
 
       <Router>
-        <nav>
+        <header>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -28,12 +29,15 @@ function App() {
               <NavLink to="/contacts">Contacts</NavLink>
             </li>
           </ul>
-        </nav>
+        </header>
         <main>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="products" element={<Products />} />
+            <Route path="/about" element={<About />} />
+            <Route exact path="/products" element={<Products />} />
+
+            {/* prodotto singolo */}
+            <Route path="products/:productName" element={<Product />} />
             <Route path="contacts" element={<Contacts />} />
           </Routes>
         </main>
